@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="downloader.Downloader">
+   <children>
+      <Label layoutX="64.0" layoutY="108.0" text="下载单个:" />
+      <TextField fx:id="single" layoutX="134.0" layoutY="103.0" prefHeight="29.0" prefWidth="433.0" />
+      <Label layoutX="64.0" layoutY="161.0" prefHeight="19.0" prefWidth="70.0" text="批量下载:" />
+      <TextArea fx:id="multiple" layoutX="134.0" layoutY="160.0" prefHeight="153.0" prefWidth="433.0" />
+      <Button fx:id="downloadbutton" layoutX="134.0" layoutY="321.0" mnemonicParsing="false" onAction="#download" text="下载" />
+      <Label layoutX="64.0" layoutY="37.0" text="下载指定页:" />
+      <Label layoutX="142.0" layoutY="71.0" text="from" />
+      <TextField fx:id="start" layoutX="182.0" layoutY="66.0" prefHeight="29.0" prefWidth="60.0" />
+      <TextField fx:id="end" layoutX="281.0" layoutY="66.0" prefHeight="29.0" prefWidth="60.0" />
+      <Label layoutX="254.0" layoutY="71.0" text="to" />
+      <TextField fx:id="pageurl" layoutX="143.0" layoutY="32.0" prefHeight="29.0" prefWidth="424.0" />
+   </children>
+</AnchorPane>
