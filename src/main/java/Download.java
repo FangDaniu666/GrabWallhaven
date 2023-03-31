@@ -5,6 +5,8 @@ import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager;
 import org.apache.hc.core5.http.HttpEntity;
 import org.apache.hc.core5.http.io.entity.EntityUtils;
+import org.jsoup.nodes.Document;
+import utils.HttpClientUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -23,9 +25,7 @@ public class Download {
     }*/
     public void doGet(PoolingHttpClientConnectionManager connectionManager,String url,int pageid,String id,int homepage) throws Exception {
         CloseableHttpClient httpClient = HttpClients.custom().setConnectionManager(connectionManager).build();
-        HttpGet httpGet = new HttpGet(url);
-
-        CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
+        CloseableHttpResponse httpResponse = HttpClientUtils.createHttpResponse(url, httpClient);
         HttpEntity entity = httpResponse.getEntity();
         if(entity!=null){
 

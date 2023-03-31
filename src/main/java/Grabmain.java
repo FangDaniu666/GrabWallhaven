@@ -10,12 +10,9 @@ import java.net.URLConnection;
 
 public class Grabmain {
     public static void main(String[] args) throws Exception {
-        PoolingHttpClientConnectionManager connectionManager = new PoolingHttpClientConnectionManager();
-        connectionManager.setMaxTotal(10);
-        connectionManager.setDefaultMaxPerRoute(10);
         //下载start到end页图片
         GetPageUrl pageUrl = new GetPageUrl();
-        pageUrl.doGet(connectionManager,17,20,"https://wallhaven.cc/search?purity=100&sorting=views&order=desc&page=");
+        pageUrl.doGet(2,5,"https://wallhaven.cc/search?purity=100&sorting=views&order=desc&page=");
     }
 
 }
